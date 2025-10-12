@@ -40,7 +40,7 @@
           "from": { "key_code": "q" },
           "to": [
             {
-              "key_code": "o",
+              "key_code": "0",
               "modifiers": ["right_option"]
             }
           ],

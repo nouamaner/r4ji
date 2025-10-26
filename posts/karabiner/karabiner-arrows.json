@@ -1,0 +1,101 @@
+{
+  "description": "Caps Lock as temporary modifier with custom mappings (instant activation, Caps alone = Esc, Vim arrows)",
+  "manipulators": [
+    {
+      "from": { "key_code": "caps_lock" },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 100,
+        "basic.to_if_held_down_threshold_milliseconds": 0
+      },
+      "to_after_key_up": [
+        {
+          "set_variable": {
+            "name": "caps_lock_held",
+            "value": 0
+          }
+        }
+      ],
+      "to_if_alone": [{ "key_code": "escape" }],
+      "to_if_held_down": [
+        {
+          "set_variable": {
+            "name": "caps_lock_held",
+            "value": 1
+          }
+        }
+      ],
+      "type": "basic"
+    },
+
+    {
+      "conditions": [
+        {
+          "name": "caps_lock_held",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": { "key_code": "semicolon" },
+      "to": [{ "key_code": "right_arrow" }],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "name": "caps_lock_held",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": { "key_code": "h" },
+      "to": [
+        {
+          "key_code": "left_arrow",
+          "modifiers": ["option"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "name": "caps_lock_held",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": { "key_code": "j" },
+      "to": [{ "key_code": "down_arrow" }],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "name": "caps_lock_held",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": { "key_code": "k" },
+      "to": [{ "key_code": "up_arrow" }],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "name": "caps_lock_held",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": { "key_code": "l" },
+      "to": [
+        {
+          "key_code": "right_arrow",
+          "modifiers": ["option"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

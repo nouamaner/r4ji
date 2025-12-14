@@ -1,0 +1,41 @@
+# -------------------------------
+# Tmux Quick Tour (Step-by-step)
+# -------------------------------
+• Start tmux:
+    tmux
+
+• Open a horizontal split:
+    Ctrl+s  then  h
+
+• Open a vertical split:
+    Ctrl+s  then  v
+
+•Rename a new session:
+    Ctrl+s then $ “session-one”
+
+•Create a new session:
+    Ctrl+s then n “session-two”
+
+• Inside the new session, create a vertical split:
+    Ctrl+s  then  v
+
+• Switch back to the previous session:
+    Ctrl+s  then  s → select with arrows/HJKL  
+    session-one → Enter
+
+• Detach from tmux:
+    Ctrl+s  then  d
+t
+• Re-attach to the last session:
+    tmux attach
+
+• Detach from tmux:
+    Ctrl+s  then  d
+
+•  attach to a specific session:
+    tmux attach -t session-two
+
+• Kill session:
+    Ctrl+s  then  s → select with arrows/HJKL  
+    session-one → x → y(yes)
+9qlnl8xnze6fc3xt6ds9

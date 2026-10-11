@@ -1,0 +1,36 @@
+[ids]
+*
+
+[main]
+leftalt = layer(alt)
+
+
+[alt]
+c = C-c
+
+
+[main]
+leftmeta = leftcontrol
+leftalt = leftmeta
+leftcontrol = leftalt
+rightmeta = rightalt
+capslock = overload(nav, esc)
+
+[nav]
+h = C-left
+j = down
+k = up
+l = C-right
+; = right
+f = 6
+e = =
+u = 5
+i = G-4  
+p = -
+o = G-=
+m = G-5
+, = G--
+r = S-102nd
+g = 8
+d = A-backspace
+' = G-6
